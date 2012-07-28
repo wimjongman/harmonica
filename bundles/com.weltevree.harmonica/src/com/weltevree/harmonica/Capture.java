@@ -11,7 +11,8 @@ public class Capture {
 
 		CapturePlayback capture = new CapturePlayback();
 		
-		capture.
+		capture.getCapture().start();
+		
 	}
 
 }
