@@ -254,6 +254,7 @@ public class CapturePlayback {
 					while (numBytesRemaining > 0) {
 						numBytesRemaining -= line.write(data, 0,
 								numBytesRemaining);
+						System.out.println(data + " " + numBytesRemaining);
 					}
 				} catch (Exception e) {
 					shutDown("Error during playback: " + e);
@@ -275,7 +276,7 @@ public class CapturePlayback {
 	/**
 	 * Reads data from the input channel and writes to the output stream
 	 */
-	class Capture implements Runnable {
+	public class Capture implements Runnable {
 
 		TargetDataLine line;
 		Thread thread;
@@ -300,8 +301,8 @@ public class CapturePlayback {
 
 		public void run() {
 
-			duration = 0;
-			audioInputStream = null;
+		//	duration = 0;
+		//	audioInputStream = null;
 
 			// define the required attributes for our line,
 			// and make sure a compatible line is supported.
@@ -318,13 +319,15 @@ public class CapturePlayback {
 
 			try {
 				line = (TargetDataLine) AudioSystem.getLine(info);
+				
+				System.out.println("line buffer size = " + line.getBufferSize());
+				
 				line.open(format, line.getBufferSize());
 			} catch (LineUnavailableException ex) {
 				shutDown("Unable to open the line: " + ex);
 				return;
 			} catch (SecurityException ex) {
 				shutDown(ex.toString());
-				JavaSound.showInfoDialog();
 				return;
 			} catch (Exception ex) {
 				shutDown(ex.toString());
