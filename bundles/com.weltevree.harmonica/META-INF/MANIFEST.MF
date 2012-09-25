@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Harmonica
+Bundle-SymbolicName: com.weltevree.harmonica
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.weltevree.harmonica,
+ com.weltevree.harmonica.internal
+Bundle-ClassPath: .,
+ jtransforms-2.4.jar
