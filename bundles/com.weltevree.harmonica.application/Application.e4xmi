@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_7eQJ8MxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ide.application" bindingContexts="_7eQJ-MxuEeKVXaZOfzH9RA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_7eQJ8cxuEeKVXaZOfzH9RA" label="com.weltevree.harmonica.application" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_7eQKD8xuEeKVXaZOfzH9RA">
+      <children xsi:type="advanced:Perspective" xmi:id="_7eQKEMxuEeKVXaZOfzH9RA">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_7eQKEcxuEeKVXaZOfzH9RA">
+          <children xsi:type="basic:PartStack" xmi:id="_7eQKEsxuEeKVXaZOfzH9RA">
+            <children xsi:type="basic:Part" xmi:id="_7eQxAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/.parts.SamplePart" label="Sample Part"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_7eQKCMxuEeKVXaZOfzH9RA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_7eQKCcxuEeKVXaZOfzH9RA" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKCsxuEeKVXaZOfzH9RA" label="Open" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/sample.gif" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKC8xuEeKVXaZOfzH9RA" label="Save" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/save_edit.gif" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKDMxuEeKVXaZOfzH9RA" label="Quit" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_7eQKDcxuEeKVXaZOfzH9RA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKDsxuEeKVXaZOfzH9RA" label="About" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_7eQxAcxuEeKVXaZOfzH9RA">
+      <children xsi:type="menu:ToolBar" xmi:id="_7eQxAsxuEeKVXaZOfzH9RA" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_7eQxA8xuEeKVXaZOfzH9RA" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/sample.gif" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_7eQxBMxuEeKVXaZOfzH9RA" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/save_edit.gif" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_7eQJ_MxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.QuitHandler" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.OpenHandler" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKA8xuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.SaveHandler" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKBsxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.AboutHandler" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+  <bindingTables xmi:id="_7eQJ_cxuEeKVXaZOfzH9RA" bindingContext="_7eQJ-MxuEeKVXaZOfzH9RA">
+    <bindings xmi:id="_7eQJ_sxuEeKVXaZOfzH9RA" keySequence="M1+Q" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
+    <bindings xmi:id="_7eQKAcxuEeKVXaZOfzH9RA" keySequence="M1+O" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
+    <bindings xmi:id="_7eQKBMxuEeKVXaZOfzH9RA" keySequence="M1+S" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
+    <bindings xmi:id="_7eQKB8xuEeKVXaZOfzH9RA" keySequence="M1+A" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+  </bindingTables>
+  <rootContext xmi:id="_7eQJ-MxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_7eQJ-cxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_7eQJ-sxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_7eQJ-8xuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_7eQJ_8xuEeKVXaZOfzH9RA" elementId="com.weltevree.harmonica.application.open" commandName="openCommand"/>
+  <commands xmi:id="_7eQKAsxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_7eQKBcxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_7eQJ8sxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_7eQJ88xuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_7eQJ9MxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_7eQJ9cxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_7eQJ9sxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_7eQJ98xuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
