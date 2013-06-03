@@ -77,8 +77,7 @@ public class CapturePlayback {
 				errStr = null;
 				audioInputStream = AudioSystem.getAudioInputStream(file);
 				fileName = file.getName();
-				long milliseconds = (long) ((audioInputStream.getFrameLength() * 1000) / audioInputStream
-						.getFormat().getFrameRate());
+				long milliseconds = (long) ((audioInputStream.getFrameLength() * 1000) / audioInputStream.getFormat().getFrameRate());
 				duration = milliseconds / 1000.0;
 			} catch (Exception ex) {
 				reportStatus(ex.toString());
@@ -87,11 +86,11 @@ public class CapturePlayback {
 			reportStatus("Audio file required.");
 		}
 	}
-	
+
 	public Capture getCapture() {
 		return capture;
 	}
-	
+
 	public Playback getPlayback() {
 		return playback;
 	}
@@ -147,8 +146,7 @@ public class CapturePlayback {
 			encoding = AudioFormat.Encoding.ALAW;
 		}
 
-		return new AudioFormat(encoding, rate, sampleSize, channels,
-				(sampleSize / 8) * channels, rate, bigEndian);
+		return new AudioFormat(encoding, rate, sampleSize, channels, (sampleSize / 8) * channels, rate, bigEndian);
 	}
 
 	private void reportStatus(String string) {
@@ -162,11 +160,24 @@ public class CapturePlayback {
 
 		SourceDataLine line;
 		Thread thread;
+		private AudioFormat format;
+		private byte[] audioBytes;
 
-		public void start() {
+		public void start(byte[] audioBytes) {
+			this.audioBytes = audioBytes;
 			errStr = null;
+
+			format = getFormat();
+			DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+
+			if (!AudioSystem.isLineSupported(info)) {
+				shutDown("Line matching " + info + " not supported.");
+				return;
+			}
+
 			thread = new Thread(this);
 			thread.setName("Playback");
+
 			thread.start();
 		}
 
@@ -183,11 +194,25 @@ public class CapturePlayback {
 			}
 		}
 
+		@Override
 		public void run() {
 
 			// reload the file if loaded by file
 			if (file != null) {
 				createAudioInputStream(file, false);
+			}
+
+			ByteArrayInputStream bais = new ByteArrayInputStream(audioBytes);
+			audioInputStream = new AudioInputStream(bais, format, audioBytes.length / format.getFrameSize());
+
+			long milliseconds = (long) ((audioInputStream.getFrameLength() * 1000) / format.getFrameRate());
+			duration = milliseconds / 1000.0;
+
+			try {
+				audioInputStream.reset();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				return;
 			}
 
 			// make sure we have something to play
@@ -206,12 +231,10 @@ public class CapturePlayback {
 			// get an AudioInputStream of the desired format for playback
 			AudioFormat format = getFormat();
 
-			AudioInputStream playbackInputStream = AudioSystem
-					.getAudioInputStream(format, audioInputStream);
+			AudioInputStream playbackInputStream = AudioSystem.getAudioInputStream(format, audioInputStream);
 
 			if (playbackInputStream == null) {
-				shutDown("Unable to convert stream of format "
-						+ audioInputStream + " to format " + format);
+				shutDown("Unable to convert stream of format " + audioInputStream + " to format " + format);
 				return;
 			}
 
@@ -252,9 +275,7 @@ public class CapturePlayback {
 					}
 					int numBytesRemaining = numBytesRead;
 					while (numBytesRemaining > 0) {
-						numBytesRemaining -= line.write(data, 0,
-								numBytesRemaining);
-						System.out.println(data + " " + numBytesRemaining);
+						numBytesRemaining -= line.write(data, 0, numBytesRemaining);
 					}
 				} catch (Exception e) {
 					shutDown("Error during playback: " + e);
@@ -280,29 +301,52 @@ public class CapturePlayback {
 
 		TargetDataLine line;
 		Thread thread;
+		private boolean stopRequested = false;
+		private byte audioBytes[];
+		private boolean isStopped;
+		private boolean running;
 
-		public void start() {
+		public synchronized void start() {
+			stopRequested = false;
+			running = false;
 			errStr = null;
 			thread = new Thread(this);
 			thread.setName("Capture");
 			thread.start();
 		}
 
-		public void stop() {
-			thread = null;
+		public synchronized void stop() {
+			stopRequested = true;
+		}
+
+		public synchronized byte[] getAudioBytes() {
+			if (running && !stopRequested) {
+				return null;
+			}
+
+			while (running)
+				try {
+					Thread.sleep(1);
+				} catch (InterruptedException e) {
+				}
+
+			return audioBytes;
 		}
 
 		private void shutDown(String message) {
 			if ((errStr = message) != null && thread != null) {
 				thread = null;
-				System.err.println(errStr);
+				Debug.err(errStr);
 			}
 		}
 
+		@Override
 		public void run() {
 
-		//	duration = 0;
-		//	audioInputStream = null;
+			running = true;
+
+			// duration = 0;
+			// audioInputStream = null;
 
 			// define the required attributes for our line,
 			// and make sure a compatible line is supported.
@@ -319,9 +363,6 @@ public class CapturePlayback {
 
 			try {
 				line = (TargetDataLine) AudioSystem.getLine(info);
-				
-				System.out.println("line buffer size = " + line.getBufferSize());
-				
 				line.open(format, line.getBufferSize());
 			} catch (LineUnavailableException ex) {
 				shutDown("Unable to open the line: " + ex);
@@ -344,7 +385,7 @@ public class CapturePlayback {
 
 			line.start();
 
-			while (thread != null) {
+			while (!stopRequested) {
 				if ((numBytesRead = line.read(data, 0, bufferLengthInBytes)) == -1) {
 					break;
 				}
@@ -365,22 +406,9 @@ public class CapturePlayback {
 			}
 
 			// load bytes into the audio input stream for playback
+			audioBytes = out.toByteArray();
 
-			byte audioBytes[] = out.toByteArray();
-			ByteArrayInputStream bais = new ByteArrayInputStream(audioBytes);
-			audioInputStream = new AudioInputStream(bais, format,
-					audioBytes.length / frameSizeInBytes);
-
-			long milliseconds = (long) ((audioInputStream.getFrameLength() * 1000) / format
-					.getFrameRate());
-			duration = milliseconds / 1000.0;
-
-			try {
-				audioInputStream.reset();
-			} catch (Exception ex) {
-				ex.printStackTrace();
-				return;
-			}
+			running = false;
 
 		}
 	}

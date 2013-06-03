@@ -14,12 +14,12 @@ public class Capture {
 
 		System.out.println("Capturing ...");
 		capture.getCapture().start();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		capture.getCapture().stop();
 		System.out.println("Captured");
 		Thread.sleep(1000);
 		System.out.println("Playback");
-		capture.getPlayback().start();
+		capture.getPlayback().start(capture.getCapture().getAudioBytes());
 		Thread.sleep(5000);
 		capture.getPlayback().stop();
 	}
