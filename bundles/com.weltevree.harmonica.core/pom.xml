@@ -9,7 +9,7 @@
 <relativePath>../../features/com.weltevree.harmonica.parent</relativePath>
 </parent>
   <groupId>com.weltevree.harmonica</groupId>
-  <artifactId>be.hogent.tarsos.dsp</artifactId>
+  <artifactId>com.weltevree.harmonica.core</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 </project>

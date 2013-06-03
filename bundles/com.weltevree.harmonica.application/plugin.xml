@@ -2,22 +2,18 @@
 <plugin>
 
    <extension
-         id="product"
+         id="harmonica"
          point="org.eclipse.core.runtime.products">
       <product
-            name="Harmonica Application"
-            application="org.eclipse.e4.ui.workbench.swt.E4Application">
-         <property
-               name="applicationCSS"
-               value="platform:/plugin/com.weltevree.harmonica.application/css/default.css">
-         </property>
-         <property
-               name="clearPersistedState"
-               value="true">
-         </property>
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="Harmonica Application">
          <property
                name="appName"
                value="Harmonica Application">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.weltevree.harmonica.application/css/default.css">
          </property>
       </product>
    </extension>

@@ -130,4 +130,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	<modules>
+		<module>../../bundles/com.weltevree.harmonica.application</module>
+		<module>../../bundles/com.weltevree.harmonica.model</module>
+		<module>../../bundles/com.weltevree.harmonica.core</module>
+		<module>../../bundles/com.weltevree.harmonica.ui</module>
+		<module>../../bundles/com.weltevree.harmonica.product</module>
+		<module>../../features/com.weltevree.harmonica.feature</module>
+		<module>../../bundles/be.hogent.tarsos.dsp</module>
+	</modules>
 </project>
