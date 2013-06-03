@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Harmonica Model
+Bundle-SymbolicName: com.weltevree.harmonica.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: www.weltevree.com
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
