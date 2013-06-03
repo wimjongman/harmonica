@@ -27,10 +27,10 @@
       </children>
     </trimBars>
   </children>
-  <handlers xmi:id="_7eQJ_MxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.QuitHandler" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
-  <handlers xmi:id="_7eQKAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.OpenHandler" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
-  <handlers xmi:id="_7eQKA8xuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.SaveHandler" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
-  <handlers xmi:id="_7eQKBsxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/handlers.AboutHandler" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQJ_MxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.QuitHandler" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.OpenHandler" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKA8xuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.SaveHandler" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_7eQKBsxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.AboutHandler" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
   <bindingTables xmi:id="_7eQJ_cxuEeKVXaZOfzH9RA" bindingContext="_7eQJ-MxuEeKVXaZOfzH9RA">
     <bindings xmi:id="_7eQJ_sxuEeKVXaZOfzH9RA" keySequence="M1+Q" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
     <bindings xmi:id="_7eQKAcxuEeKVXaZOfzH9RA" keySequence="M1+O" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>

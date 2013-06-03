@@ -8,7 +8,7 @@
  * Contributors:
  *     IBM Corporation - initial API and implementation
  *******************************************************************************/
-package handlers;
+package com.weltevree.harmonica.application.handlers;
 
 import java.lang.reflect.InvocationTargetException;
 
