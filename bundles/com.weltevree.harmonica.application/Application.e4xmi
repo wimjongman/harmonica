@@ -2,10 +2,10 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_7eQJ8MxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ide.application" bindingContexts="_7eQJ-MxuEeKVXaZOfzH9RA">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_7eQJ8cxuEeKVXaZOfzH9RA" label="com.weltevree.harmonica.application" width="500" height="400">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_7eQKD8xuEeKVXaZOfzH9RA">
-      <children xsi:type="advanced:Perspective" xmi:id="_7eQKEMxuEeKVXaZOfzH9RA">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_7eQKEcxuEeKVXaZOfzH9RA">
+      <children xsi:type="advanced:Perspective" xmi:id="_7eQKEMxuEeKVXaZOfzH9RA" elementId="perspective.main">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_7eQKEcxuEeKVXaZOfzH9RA" elementId="sashcontainer.left">
           <children xsi:type="basic:PartStack" xmi:id="_7eQKEsxuEeKVXaZOfzH9RA">
-            <children xsi:type="basic:Part" xmi:id="_7eQxAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/.parts.SamplePart" label="Sample Part"/>
+            <children xsi:type="basic:Part" xmi:id="_7eQxAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.parts.SamplePart" label="Sample Part"/>
           </children>
         </children>
       </children>

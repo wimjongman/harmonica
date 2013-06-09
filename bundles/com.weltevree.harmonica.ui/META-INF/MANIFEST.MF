@@ -1,10 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Harmonica Eclipse UI
-Bundle-SymbolicName: com.weltevree.harmonica.ui
+Bundle-SymbolicName: com.weltevree.harmonica.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: www.weltevree.com
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.eclipse.e4.ui.di;bundle-version="0.10.1",
  org.eclipse.swt;bundle-version="3.100.1",
- org.eclipse.ui.forms;bundle-version="3.5.200"
+ org.eclipse.ui.forms;bundle-version="3.5.200",
+ org.eclipse.jface;bundle-version="3.8.101",
+ org.eclipse.nebula.widgets.pshelf;bundle-version="1.0.0",
+ be.hogent.tarsos.dsp;bundle-version="1.0.0",
+ org.eclipse.e4.ui.workbench

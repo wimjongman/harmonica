@@ -11,6 +11,7 @@
 package com.weltevree.harmonica.application.parts;
 
 import javax.annotation.PostConstruct;
+
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;

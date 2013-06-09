@@ -34,6 +34,7 @@
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
       <feature id="com.weltevree.harmonica.feature"/>
+      <feature id="org.eclipse.nebula.widgets.pshelf.feature"/>
    </features>
 
    <configurations>
