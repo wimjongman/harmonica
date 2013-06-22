@@ -8,3 +8,17 @@ Bundle-Vendor: www.weltevree.com
 Bundle-ActivationPolicy: lazy
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ TarsosDSP-nightly.jar
+Export-Package: be.hogent.tarsos.dsp,
+ be.hogent.tarsos.dsp.beatroot,
+ be.hogent.tarsos.dsp.effects,
+ be.hogent.tarsos.dsp.filters,
+ be.hogent.tarsos.dsp.mfcc,
+ be.hogent.tarsos.dsp.onsets,
+ be.hogent.tarsos.dsp.pitch,
+ be.hogent.tarsos.dsp.resample,
+ be.hogent.tarsos.dsp.synthesis,
+ be.hogent.tarsos.dsp.util,
+ be.hogent.tarsos.dsp.util.fft,
+ com.weltevree.harmonica.core

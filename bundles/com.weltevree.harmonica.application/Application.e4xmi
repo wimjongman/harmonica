@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_7eQJ8MxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ide.application" bindingContexts="_7eQJ-MxuEeKVXaZOfzH9RA">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_7eQJ8cxuEeKVXaZOfzH9RA" label="com.weltevree.harmonica.application" width="500" height="400">
-    <children xsi:type="advanced:PerspectiveStack" xmi:id="_7eQKD8xuEeKVXaZOfzH9RA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_7eQJ8cxuEeKVXaZOfzH9RA" elementId="trimmed.window.1" label="com.weltevree.harmonica.application" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_7eQKD8xuEeKVXaZOfzH9RA" elementId="perspective.stack">
       <children xsi:type="advanced:Perspective" xmi:id="_7eQKEMxuEeKVXaZOfzH9RA" elementId="perspective.main">
         <children xsi:type="basic:PartSashContainer" xmi:id="_7eQKEcxuEeKVXaZOfzH9RA" elementId="sashcontainer.left">
-          <children xsi:type="basic:PartStack" xmi:id="_7eQKEsxuEeKVXaZOfzH9RA">
-            <children xsi:type="basic:Part" xmi:id="_7eQxAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.parts.SamplePart" label="Sample Part"/>
+          <children xsi:type="basic:PartStack" xmi:id="_7eQKEsxuEeKVXaZOfzH9RA" elementId="sashcontainer.left.stack.0">
+            <children xsi:type="basic:Part" xmi:id="_7eQxAMxuEeKVXaZOfzH9RA" elementId="sample.part" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.parts.SamplePart" label="Sample Part"/>
           </children>
         </children>
       </children>
     </children>
     <mainMenu xmi:id="_7eQKCMxuEeKVXaZOfzH9RA" elementId="menu:org.eclipse.ui.main.menu">
-      <children xsi:type="menu:Menu" xmi:id="_7eQKCcxuEeKVXaZOfzH9RA" label="File">
+      <children xsi:type="menu:Menu" xmi:id="_7eQKCcxuEeKVXaZOfzH9RA" elementId="file.menu" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKCsxuEeKVXaZOfzH9RA" label="Open" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/sample.gif" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKC8xuEeKVXaZOfzH9RA" label="Save" iconURI="platform:/plugin/com.weltevree.harmonica.application/icons/save_edit.gif" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKDMxuEeKVXaZOfzH9RA" label="Quit" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
       </children>
-      <children xsi:type="menu:Menu" xmi:id="_7eQKDcxuEeKVXaZOfzH9RA" label="Help">
+      <children xsi:type="menu:Menu" xmi:id="_7eQKDcxuEeKVXaZOfzH9RA" elementId="help.menu" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_7eQKDsxuEeKVXaZOfzH9RA" label="About" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
       </children>
     </mainMenu>
@@ -31,11 +31,13 @@
   <handlers xmi:id="_7eQKAMxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.OpenHandler" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
   <handlers xmi:id="_7eQKA8xuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.SaveHandler" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
   <handlers xmi:id="_7eQKBsxuEeKVXaZOfzH9RA" contributionURI="bundleclass://com.weltevree.harmonica.application/com.weltevree.harmonica.application.handlers.AboutHandler" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+  <handlers xmi:id="_4zdOcNtSEeKbH_hn9b3n3w" elementId="e4.tooling.livemodel.handler" contributionURI="bundleclass://org.eclipse.e4.tools.emf.liveeditor/org.eclipse.e4.tools.emf.liveeditor.OpenLiveDialogHandler" command="_ukAX4NtSEeKbH_hn9b3n3w"/>
   <bindingTables xmi:id="_7eQJ_cxuEeKVXaZOfzH9RA" bindingContext="_7eQJ-MxuEeKVXaZOfzH9RA">
     <bindings xmi:id="_7eQJ_sxuEeKVXaZOfzH9RA" keySequence="M1+Q" command="_7eQJ-8xuEeKVXaZOfzH9RA"/>
     <bindings xmi:id="_7eQKAcxuEeKVXaZOfzH9RA" keySequence="M1+O" command="_7eQJ_8xuEeKVXaZOfzH9RA"/>
     <bindings xmi:id="_7eQKBMxuEeKVXaZOfzH9RA" keySequence="M1+S" command="_7eQKAsxuEeKVXaZOfzH9RA"/>
     <bindings xmi:id="_7eQKB8xuEeKVXaZOfzH9RA" keySequence="M1+A" command="_7eQKBcxuEeKVXaZOfzH9RA"/>
+    <bindings xmi:id="_pFM3ANq8EeKbH_hn9b3n3w" elementId="com.weltevree.harmonica.application.keybinding.0" keySequence="ALT+SHIFT+F9"/>
   </bindingTables>
   <rootContext xmi:id="_7eQJ-MxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_7eQJ-cxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
@@ -45,6 +47,7 @@
   <commands xmi:id="_7eQJ_8xuEeKVXaZOfzH9RA" elementId="com.weltevree.harmonica.application.open" commandName="openCommand"/>
   <commands xmi:id="_7eQKAsxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_7eQKBcxuEeKVXaZOfzH9RA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_ukAX4NtSEeKbH_hn9b3n3w" elementId="e4.tooling.livemodel" commandName="Show running app model" description="Show the running application model"/>
   <addons xmi:id="_7eQJ8sxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_7eQJ88xuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_7eQJ9MxuEeKVXaZOfzH9RA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

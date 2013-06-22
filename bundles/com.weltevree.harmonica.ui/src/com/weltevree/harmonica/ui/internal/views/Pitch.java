@@ -120,5 +120,8 @@ public class Pitch {
 
 	@Focus
 	protected void focus() {
+		if(tableViewer == null)
+			return;
+		tableViewer.getControl().setFocus();
 	}
 }

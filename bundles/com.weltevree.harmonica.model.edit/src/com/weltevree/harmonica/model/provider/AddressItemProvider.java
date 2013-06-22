@@ -81,7 +81,7 @@ public class AddressItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_Address_line_feature", "_UI_Address_type"),
 				 ModelPackage.Literals.ADDRESS__LINE,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
